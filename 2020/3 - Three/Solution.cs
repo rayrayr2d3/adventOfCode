@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Nineteen.Four
+namespace Twenty.Three
 {
     public class Solution
     {
@@ -25,7 +25,7 @@ namespace Nineteen.Four
 
         public static IEnumerable<string> GetInput()
         {
-            return File.ReadLines($"..\\..\\..\\4 - Four\\input.txt");
+            return File.ReadLines($"..\\..\\..\\3 - Three\\input.txt");
         }
     }
 }
