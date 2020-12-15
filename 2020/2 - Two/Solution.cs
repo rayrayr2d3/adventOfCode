@@ -61,8 +61,6 @@ namespace Twenty.Two
             Console.WriteLine(count);
         }
 
-        // 813 too high
-
         public static IEnumerable<string> GetInput()
         {
             return File.ReadLines($"..\\..\\..\\2 - Two\\input.txt");
