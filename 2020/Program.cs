@@ -8,23 +8,31 @@ namespace Twenty
         {
             Console.WriteLine("Solutions to Advent of Code 2020.");
             Console.WriteLine("What day?: ");
-            var folder = Console.ReadLine();
+            var day = Console.ReadLine();
             Console.WriteLine("Part one (1) or part two (2)?: ");
             var part = Console.ReadLine();
 
-            switch (folder)
+            switch (day)
             {
-                case "One":
+                case "1":
                     if (part.Equals("1")) One.Solution.PartOne();
                     if (part.Equals("2")) One.Solution.PartTwo();
                     break;
-                case "Two":
+                case "2":
                     if (part.Equals("1")) Two.Solution.PartOne();
                     if (part.Equals("2")) Two.Solution.PartTwo();
                     break;
-                case "Three":
+                case "3":
                     if (part.Equals("1")) Three.Solution.PartOne();
                     if (part.Equals("2")) Three.Solution.PartTwo();
+                    break;
+                case "15":
+                    if (part.Equals("1")) Fifteen.Solution.PartOne();
+                    if (part.Equals("2")) Fifteen.Solution.PartTwo();
+                    break;
+                case "16":
+                    if (part.Equals("1")) Sixteen.Solution.PartOne();
+                    if (part.Equals("2")) Sixteen.Solution.PartTwo();
                     break;
             }
         }
