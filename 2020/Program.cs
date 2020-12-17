@@ -34,6 +34,10 @@ namespace Twenty
                     if (part.Equals("1")) Sixteen.Solution.PartOne();
                     if (part.Equals("2")) Sixteen.Solution.PartTwo();
                     break;
+                case "17":
+                    if (part.Equals("1")) Seventeen.Solution.PartOne();
+                    if (part.Equals("2")) Seventeen.Solution.PartTwo();
+                    break;
             }
         }
     }
