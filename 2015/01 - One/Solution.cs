@@ -23,8 +23,19 @@ namespace Fifteen.One
 
         public static void PartTwo()
         {
-            var input = GetInput().ToList();
+            var input = GetInput().ToList()[0].ToCharArray();
+            var floor = 0;
 
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i].Equals('(')) floor++;
+                if (input[i].Equals(')')) floor--;
+                if (floor == -1)
+                {
+                    Console.WriteLine(i + 1);
+                    break;
+                }
+            }
         }
 
         public static IEnumerable<string> GetInput()
