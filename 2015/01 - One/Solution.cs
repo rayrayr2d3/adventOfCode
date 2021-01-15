@@ -9,12 +9,16 @@ namespace Fifteen.One
     {
         public static void PartOne()
         {
-            var input = GetInput().ToList();
+            var input = GetInput().ToList()[0].ToCharArray();
+            var floor = 0;
 
-            for (int i = 0; i < input.Count; i++)
+            for (int i = 0; i < input.Length; i++)
             {
-                Console.WriteLine(input);
+                if (input[i].Equals('(')) floor++;
+                if (input[i].Equals(')')) floor--;
             }
+
+            Console.WriteLine(floor);
         }
 
         public static void PartTwo()
