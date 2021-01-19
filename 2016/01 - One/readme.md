@@ -19,7 +19,7 @@ For example:
 
 How many blocks away is Easter Bunny HQ?
 
-#### 332
+#### 332 blocks
 
 
 ### --- Part Two ---
@@ -30,4 +30,4 @@ For example, if your instructions are R8, R4, R4, R8, the first location you vis
 
 How many blocks away is the first location you visit twice?
 
-####
+#### 166 blocks
