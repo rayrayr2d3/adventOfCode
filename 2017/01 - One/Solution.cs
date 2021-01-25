@@ -9,7 +9,7 @@ namespace Seventeen.One
     {
         public static void PartOne()
         {
-            var input = GetInput().ToList()[0].ToString().ToCharArray().Select(_ => int.Parse(_.ToString())).ToList();            
+            var input = GetInput().ToList()[0].ToString().ToCharArray().Select(_ => int.Parse(_.ToString())).ToList();
             var traversed = new List<int>();
             var sum = 0;
 
@@ -30,8 +30,14 @@ namespace Seventeen.One
 
         public static void PartTwo()
         {
-            var input = GetInput().ToList();
+            var input = GetInput().ToList()[0].ToString().ToCharArray().Select(_ => int.Parse(_.ToString())).ToList();
+            var count = input.Count();
+            var sum = 0;
 
+            for (var i = 0; i < count/2; i++)
+                if (input[i] == input[(count / 2) + i]) sum += 2 * input[i];
+
+            Console.WriteLine(sum);
         }
 
         public static IEnumerable<string> GetInput()
