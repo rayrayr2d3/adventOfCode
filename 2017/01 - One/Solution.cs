@@ -9,12 +9,23 @@ namespace Seventeen.One
     {
         public static void PartOne()
         {
-            var input = GetInput().ToList();
+            var input = GetInput().ToList()[0].ToString().ToCharArray().Select(_ => int.Parse(_.ToString())).ToList();            
+            var traversed = new List<int>();
+            var sum = 0;
 
-            for (int i = 0; i < input.Count; i++)
+            for (var i = 0; i < input.Count(); i++)
             {
-                Console.WriteLine(input);
+                if (!traversed.Any()) traversed.Add(input[i]);
+                else
+                {
+                    if (traversed[i - 1] == input[i]) sum += input[i];
+                    traversed.Add(input[i]);
+                }
             }
+
+            if (traversed[traversed.Count - 1] == traversed[0]) sum += traversed[traversed.Count - 1];
+
+            Console.WriteLine(sum);
         }
 
         public static void PartTwo()
