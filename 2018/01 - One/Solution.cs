@@ -9,18 +9,19 @@ namespace Eighteen.One
     {
         public static void PartOne()
         {
-            var input = GetInput().ToList();
+            var input = GetInput().ToList().Select(_ => int.Parse(_)).ToList();
+            var result = 0;
 
-            for (int i = 0; i < input.Count; i++)
-            {
-                Console.WriteLine(input);
-            }
+            for (var i = 0; i < input.Count(); i++)
+                result += input[i];
+
+            Console.WriteLine(result);
         }
 
         public static void PartTwo()
         {
-            var input = GetInput().ToList();
-
+            var input = GetInput().ToList().Select(_ => int.Parse(_)).ToList();
+            input.ForEach(_ => Console.WriteLine(_));
         }
 
         public static IEnumerable<string> GetInput()
